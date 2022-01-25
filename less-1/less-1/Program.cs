@@ -10,6 +10,8 @@ namespace less_1
     {
         static void Main(string[] args)
         {
+            string userName = Console.ReadLine();
+            Console.WriteLine($"Привет, {userName}, сегодня {DateTime.Now.ToShortDateString()}");
         }
     }
 }
