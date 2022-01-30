@@ -18,76 +18,20 @@ namespace Task_2
             */
 
             Console.WriteLine("Введите порядковый номер текущего месяца");
+            
             string userEnter = Console.ReadLine();
-            if (int.TryParse(userEnter, out int month))                     //проверка на корректность ввода от пользователя
+            if (int.TryParse(userEnter, out int month))                         //проверка на корректность ввода от пользователя
             {
-                switch (month)                                              //если ввод от пользователя корректный, int.TryParse дает выводной результат в целочисленную переменную 'month'
+                DateTime _date = new DateTime();                                //иницилизируем объект даты
+                string dateToParse = $"10.{userEnter}.1990";                    //создаем строку для парса даты
+
+                if (DateTime.TryParse(dateToParse, out _date))                  //проверяем корректность ввода от пользователя
                 {
-                    case 1:
-                        {
-                            Console.WriteLine("Январь");
-                            break;
-                        }
-                    case 2:
-                        {
-                            Console.WriteLine("Февраль");
-                            break;
-                        }
-                    case 3:
-                        {
-                            Console.WriteLine("Март");
-                            break;
-                        }
-                    case 4:
-                        {
-                            Console.WriteLine("Апрель");
-                            break;
-                        }
-                    case 5:
-                        {
-                            Console.WriteLine("Май");
-                            break;
-                        }
-                    case 6:
-                        {
-                            Console.WriteLine("Июнь");
-                            break;
-                        }
-                    case 7:
-                        {
-                            Console.WriteLine("Июль");
-                            break;
-                        }
-                    case 8:
-                        {
-                            Console.WriteLine("Август");
-                            break;
-                        }
-                    case 9:
-                        {
-                            Console.WriteLine("Сентябрь");
-                            break;
-                        }
-                    case 10:
-                        {
-                            Console.WriteLine("Октябрь");
-                            break;
-                        }
-                    case 11:
-                        {
-                            Console.WriteLine("Ноябрь");
-                            break;
-                        }
-                    case 12:
-                        {
-                            Console.WriteLine("Декабрь");
-                            break;
-                        }
-                    default:
-                        {
-                            Console.WriteLine("Введенное число не является месяцем...");//вывод сообщения об ошибке, если пользователь ввел число не соответсвующие месяцу.
-                            break;
-                        }
+                    Console.WriteLine(_date.ToString("MMMM"));                  //вывод месяца на консоль
+                }
+                else
+                {
+                    Console.WriteLine("Введенное число не является месяцем...");//вывод сообщения об ошибке, если пользователь ввел число не соответсвующие месяцу.
                 }
             }
             else
