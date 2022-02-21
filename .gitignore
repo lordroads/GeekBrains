@@ -357,3 +357,6 @@ MigrationBackup/
 .ionide/
 
 # End of https://www.toptal.com/developers/gitignore/api/vs
+Lessond-7/Task-1/DecompiledDotPeek/AssemblyInfo.cs
+Lessond-7/Task-1/DecompiledDotPeek/DecompiledDotPeek.csproj
+Lessond-7/Task-1/DecompiledDotPeek/DecompiledDotPeek.sln
